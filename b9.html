@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [6,6,99,2,9,17,9,97,97,18,7,69,20,10,72];
+    let character = Number(prompt(" Nhập số bất kì "));
+    function check(array,character) {
+        let count = 0;
+        let tonTai = false;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] === character) {
+                tonTai = true;
+                break;
+            }
+        }
+        if (tonTai) {
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] === character) {
+                    count += 1;
+                }
+            }
+        } else {
+            count = -1
+        }
+        return count;
+
+    }
+    alert(check(arr,character));
+
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function inputArr(a) {
+        let sizeArr;
+        do {
+            sizeArr = +prompt(" Nhâp kích thước mảng : ");
+        } while (sizeArr <= 0);
+
+        for (let i = 0; i < sizeArr; i++) {
+            a[i] = +prompt(" Nhập phần tử thứ " + i + " : ");
+        }
+
+    }
+    
+    function displayArr(a) {
+        for (let i = 0; i < a.length; i++) {
+            document.write(a[i] + " ");
+        }
+
+    }
+    
+    function reverseArr(a) {
+        let temporary;
+        for (let i = 0; i < a.length / 2; i++) {
+            temporary = a[i];
+            a[i] = a[a.length - 1 - i];
+             a[a.length - 1 - i] = temporary;
+        }
+        return a;
+
+    }
+    let arr = new Array();
+    inputArr(arr);
+    displayArr(arr);
+    document.write("<br>" + " Mảng sau khi đảo ngược : " + reverseArr(arr));
+</script>
+</body>
+</html>
